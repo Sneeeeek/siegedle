@@ -1,16 +1,15 @@
-const options = ["name1", "name2", "name3", "name4", "name5"];
+const data = [["name1", "type1", "wpn1"], ["name2", "type2", "wpn2"], ["name3", "type2", "wpn1"], ["name4", "type1", "wpn2"], ["name5", "type1", "wpn1"]];
+
 
 function fillSelect(){
-    console.log("loaded js");
-    console.log(options);
+    console.log(data); // debug
     index = 0;
-    for (element in options) {
+    for (element in data) {
         var option = document.createElement("option");
-        option.value = options[index];
-        option.innerHTML = options[index];
-        // option.style.backgroundImage = "url(dog.gif)";
+        option.value = data[index][0];
+        option.innerHTML = data[index][0];
+        // option.style.backgroundImage = "url(dog.gif)"; unused experiment
         
-        // then append it to the select element
         document.getElementById("nameselector").appendChild(option);
         index++;
     }
