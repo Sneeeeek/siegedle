@@ -8,15 +8,27 @@
     <script src="client.js"></script>
 </head>
 
-<body onload="fillSelect()">
+<body onload="fillSelect(), updateTriesLeft()">
     <div class="mainblock">
         <p>Title</p>
         <select id="nameselector">
         </select>
         <br>
-        <button onclick="submitGuess()" style="margin-top: 10px;">Submit</button>
+        <button onclick="submitGuess()" style="margin-top: 10px;" id="button">Submit</button>
         <br style="margin-bottom: 10px;">
         <img src="dog.gif">
+        <p>the correct answer currently is nøkk</p>
+        <p id="triesLeftCounter"></p>
+    </div>
+
+    <div class="guess-header">
+        <p>Operator</p>
+        <p>Side</p>
+        <p>Primary</p>
+    </div>
+
+    <div class="guess-header" id="guesses">
+        
     </div>
 </body>
 </html>
