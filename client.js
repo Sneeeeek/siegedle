@@ -22,6 +22,7 @@ function updateTriesLeft() {
     if(triesLeft == 0){
         console.log("no more tries!");
         document.getElementById("button").setAttribute("disabled","");
+        alert("You Lost.");
         return;
     }
 }
@@ -29,6 +30,7 @@ function updateTriesLeft() {
 function submitGuess() {
     var input = document.getElementById("nameselector").value;
     // console.log("current input value is " + input);
+    correctsInARow = 0;
 
         for (i = 0; i < 3; i++){
             option = document.createElement("p");
@@ -36,13 +38,21 @@ function submitGuess() {
 
             if(validateField(input, i+1)) {
                 option.classList.add("correct");
+                correctsInARow++;
             } else {
                 option.classList.add("incorrect");  
             }
-
+            
+            
             document.getElementById("guesses").appendChild(option);
         };
-        
+    
+    if(correctsInARow == 3){
+        alert("You Won!");
+        document.getElementById("button").setAttribute("disabled","");
+        return;
+    }
+
     triesLeft -= 1;
     console.log(triesLeft + " tries left");
     updateTriesLeft();
