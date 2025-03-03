@@ -14,3 +14,7 @@ function fillSelect(){
         index++;
     }
 }
+
+function submitGuess() {
+    
+}
