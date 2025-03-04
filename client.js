@@ -22,7 +22,8 @@ function updateTriesLeft() {
     if(triesLeft == 0){
         console.log("no more tries!");
         document.getElementById("button").setAttribute("disabled","");
-        alert("You Lost.");
+        document.getElementById("completionState").classList.add("displayUnset");
+        document.getElementById("completionStateText").innerHTML = "You failed!";
         return;
     }
 }
@@ -48,8 +49,9 @@ function submitGuess() {
         };
     
     if(correctsInARow == 3){
-        alert("You Won!");
         document.getElementById("button").setAttribute("disabled","");
+        document.getElementById("completionState").classList.add("displayUnset");
+        document.getElementById("completionStateText").innerHTML = "You won!";
         return;
     }
 

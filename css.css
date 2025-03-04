@@ -29,6 +29,26 @@ body {
     margin-left: 2px;
 } */
 
-
 .incorrect {background-color: rgb(255, 103, 103) !important;}
 .correct {background-color: rgb(103, 255, 103) !important;}
+.displayUnset {display: unset !important;     animation: completionState 1.5s;}
+
+#completionState {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 25%;
+    display: none;
+}
+
+#completionState > div {
+    margin: 0 20% 0 20%;
+    border: solid gray 3px;
+    background-color: whitesmoke;
+}
+
+@keyframes completionState {
+    0% {top: 70%;}
+    100% {top:25%;}
+}
