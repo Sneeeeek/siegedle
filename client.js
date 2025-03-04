@@ -80,7 +80,7 @@ const data = [
 
 //the correct answer is the ID number in the first dataset column.
 //random integer between 0 and 73.
-const correctAnswer = Math.floor(Math.random() * 74); ;
+const correctAnswer = Math.floor(Math.random() * 74);
 triesLeft = 5;
 const rowAmount = 5;
 
