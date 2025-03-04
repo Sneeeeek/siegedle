@@ -1,6 +1,7 @@
 const data = [["0", "Thatcher", "attacker", "AR-33"], ["1", "Smoke", "defender", "FMG-9"], ["2", "Rook", "defender", "MP5"], ["3", "Nøkk", "attacker", "FMG-9"], ["4", "Flores", "attacker", "AR-33"]];
 const correctAnswer = 3;
 triesLeft = 5;
+const rowAmount = 3;
 
 function fillSelect() {
     console.log(data); // debug
@@ -33,7 +34,7 @@ function submitGuess() {
     // console.log("current input value is " + input);
     correctsInARow = 0;
 
-        for (i = 0; i < 3; i++){
+        for (i = 0; i < rowAmount; i++){
             option = document.createElement("p");
             option.innerHTML = data[input][i+1];
 
@@ -48,7 +49,7 @@ function submitGuess() {
             document.getElementById("guesses").appendChild(option);
         };
     
-    if(correctsInARow == 3){
+    if(correctsInARow == rowAmount){
         document.getElementById("button").setAttribute("disabled","");
         document.getElementById("completionState").classList.add("displayUnset");
         document.getElementById("completionStateText").innerHTML = "You won!";
