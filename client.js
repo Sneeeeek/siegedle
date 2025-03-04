@@ -22,7 +22,7 @@ const data = [
     [19,"Lion","Attacker",2,"V308","Hunter"],
     [20,"Finka","Attacker",2,"Spear .308","Utilitu"],
     [21,"Maverick","Attacker",3,"M4","Hard Breach"],
-    [22,"NomWB","Attacker",2,"ARX200","Utility"],
+    [22,"Nomad","Attacker",2,"ARX200","Utility"],
     [23,"Gridlock","Attacker",1,"F90","Utility"],
     [24,"Nøkk","Attacker",2,"FMG-9","Hunter"],
     [25,"Amaru","Attacker",2,"SuperNova","Hunter"],
